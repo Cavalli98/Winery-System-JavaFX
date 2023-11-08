@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AccessBorderPane" fx:id="AccessBorderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" stylesheets="application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerLoginScene">
+	<center>
+		<StackPane fx:id="AccessStackCenter" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="480.0" BorderPane.alignment="CENTER">
+			<children>
+				<GridPane id="AccessGridPane" fx:id="LoginGridPane">
+					<children>
+						<Label id="GeneralLabel" text="Username: " GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+						<TextField fx:id="LoginUserField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+						<Label id="GeneralLabel" text="Password: " GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+						<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="339.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+							<children>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="LoginRect" arcHeight="10.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleLoginRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleLoginRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="SubscribeRect" arcHeight="10.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleSubscribeRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleSubscribeRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscribe">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="EmployeeRect" arcHeight="5.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleEmployeeRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleEmployeeRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+							</children>
+						</HBox>
+						<PasswordField fx:id="LoginPasswField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+						<Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="339.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+						<VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+							<children>
+								<Label fx:id="LoginErrorLabel" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" />
+								<Button fx:id="LoginButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoginButtonClicked" prefHeight="40.0" prefWidth="80.0" text="Login">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+				</GridPane>
+				<GridPane id="AccessGridPane" fx:id="EmployeeGridPane">
+					<children>
+						<Label id="GeneralLabel" text="Code: " GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+						<TextField fx:id="EmployeeCodeField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+						<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="339.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+							<children>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="LoginRect2" arcHeight="10.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleLoginRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleLoginRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="SubscribeRect2" arcHeight="10.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleSubscribeRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleSubscribeRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscribe">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="EmployeeRect2" arcHeight="5.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleEmployeeRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleEmployeeRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+							</children>
+						</HBox>
+						<VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+							<children>
+								<Label fx:id="EmployeeLoginErrorLabel" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" />
+								<Button fx:id="EmployeeLoginButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEmployeeButtonClicked" prefHeight="40.0" prefWidth="80.0" text="Login">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Button>
+							</children>
+						</VBox>
+						<Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="339.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+					</children>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+				</GridPane>
+				<GridPane id="AccessGridPane" fx:id="SubscribeGridPane" StackPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label id="GeneralLabel" text="Email: " GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+						<TextField fx:id="SubscribeUserField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+						<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+							<children>
+								<CheckBox id="SubscribePasswCheckBox" fx:id="SubscribePasswCheckBox" contentDisplay="RIGHT" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0" />
+								<Label graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Show Password">
+									<font>
+										<Font name="Arial" size="16" />
+									</font>
+								</Label>
+							</children>
+						</HBox>
+						<Label id="GeneralLabel" text="Password: " GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+						<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="339.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+							<children>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="LoginRect1" arcHeight="10.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleLoginRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleLoginRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="SubscribeRect1" arcHeight="10.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleSubscribeRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleSubscribeRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscribe">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+								<StackPane prefHeight="150.0" prefWidth="205.0">
+									<children>
+										<Rectangle fx:id="EmployeeRect1" arcHeight="5.0" arcWidth="5.0" fill="#27e514" height="40.0" onMousePressed="#handleEmployeeRectClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="110.0" />
+										<Text onMousePressed="#handleEmployeeRectClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee">
+											<font>
+												<Font size="22.0" />
+											</font>
+										</Text>
+									</children>
+								</StackPane>
+							</children>
+						</HBox>
+						<Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="339.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+						<StackPane alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+							<children>
+								<PasswordField fx:id="SubscribePasswField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" />
+								<TextField fx:id="SubscribePasswFieldVisible" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" />
+							</children>
+						</StackPane>
+						<VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+							<children>
+								<Label fx:id="SubscribeErrorLabel" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" />
+								<Button fx:id="SubscribeButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSubscribeButtonClicked" prefHeight="40.0" prefWidth="80.0" text="Subscribe">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+				</GridPane>
+			</children>
+		</StackPane>
+	</center>
+	<right>
+		<Region opacity="0.0" BorderPane.alignment="CENTER" />
+	</right>
+	<left>
+		<Region opacity="0.0" BorderPane.alignment="CENTER" />
+	</left>
+	<bottom>
+		<Region minWidth="-Infinity" opacity="0.0" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+	</bottom>
+	<top>
+		<Region minWidth="-Infinity" opacity="0.0" prefHeight="50.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER" />
+	</top>
+</BorderPane>

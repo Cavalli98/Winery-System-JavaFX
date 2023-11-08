@@ -1,0 +1,94 @@
+#AccessBorderPane{
+    -fx-background-color: rgba(100, 100 ,100, 0); 
+    -fx-background-radius: 1;
+}
+
+#AccessGridPane{
+	-fx-background-color: linear-gradient(from 0% 0% to 50px 200px, #24a000,  #27e514);
+	-fx-background-shape: rounded-rectangle;
+    -fx-background-radius: 10;
+}
+
+#SubscribePasswCheckBox > .box{
+	-fx-padding: 0.334em 0.334em 0.5em 0.5em;
+}
+
+#SubscribePasswCheckBox > .mark{
+	-fx-padding: 0.334em 0.334em 0.5em 0.5em;
+}
+
+#UserMPBorderPane{
+    -fx-background-color: rgba(100, 100 ,100, 0);
+}
+
+#UserCenterStackPane{
+    -fx-background-color: rgba(100, 100 ,100, 0);	
+}
+
+#UserNotificationGridPane{
+    -fx-background-color: rgba(100, 100 ,100, 0);
+}
+
+#UserSearchGridPane{
+    -fx-background-color: rgba(100, 100 ,100, 0);
+}
+
+#GeneralLabel{
+	-fx-font-family: Arial;
+	-fx-font-size: 18;
+}
+
+#GeneralErrorLabel{
+	-fx-font-family: Arial;
+	-fx-font-size: 14;
+	-fx-text-fill: red;
+}
+
+#ToolBar{
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-min-height: 40;
+	-fx-pref-height: 40;
+	-fx-max-height: 40;
+	-fx-min-width: 60;
+	-fx-pref-width: 200;
+	-fx-max-width: 200;	
+}
+
+#UserSearchScrollPane{
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-border-style: solid;
+	-fx-border-width: 2;
+	-fx-border-color: black;
+}
+
+#UserSearchVBox{
+	
+}
+
+#UserWelcomePageTabPane .tab-header-area .tab-header-background{
+	-fx-opacity: 0;
+}
+
+#GeneralTabUser{
+	-fx-background-color: rgb(130, 64, 91);
+}
+
+#UserWelcomeAnchorPanes{
+  -fx-background-image: url("resources/viniSfondoRossoTT.jpg");
+  -fx-background-size: cover;
+}
+
+#UserWelcomeLabels{
+	-fx-font-family: Times New Roman;
+	-fx-text-fill: black;
+	-fx-font-weight: 600;
+	-fx-font-style: italic;
+	-fx-font-size: 14;
+}
+
+#EmployeeWelcomeLabels{
+	-fx-font-family: Times New Roman;
+	-fx-text-fill: black;
+	-fx-font-weight: 600;
+	-fx-font-size: 18;
+}

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane id="UserMPBorderPane" fx:id="UserMPBorderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" stylesheets="application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerUserMainPageScene">
+	<right>
+	</right>
+	<left>
+	</left>
+	<bottom>
+	</bottom>
+	<top>
+		<HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="405.0" spacing="5.0" BorderPane.alignment="CENTER_RIGHT">
+			<children>
+				<Label id="UserSearchErrorLabel" fx:id="UserSearchErrorLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="110.0" />
+				<TextField id="SearchNameField" fx:id="SearchNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUserSearch" prefHeight="30.0" prefWidth="100.0" promptText="Name:">
+					<font>
+						<Font name="Arial" size="14.0" />
+					</font>
+				</TextField>
+				<TextField id="SearchYearField" fx:id="SearchYearField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUserSearch" prefHeight="30.0" prefWidth="60.0" promptText="Year:">
+					<font>
+						<Font name="Arial" size="14.0" />
+					</font>
+				</TextField>
+				<Button id="UserNotificationButton" fx:id="UserNotificationButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUserNotificationButtonPressed" prefHeight="30.0" prefWidth="60.0" text="Notification">
+					<font>
+						<Font name="Arial" size="9.0" />
+					</font>
+				</Button>
+            <Button id="UserNotificationButton" fx:id="UserHistoryButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUserHistoryButtonPressed" prefHeight="30.0" prefWidth="60.0" text="History">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Button>
+				<Button id="UserLogoutButton" fx:id="UserLogoutButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUserLogoutButtonPressed" prefHeight="30.0" prefWidth="60.0" text="Logout">
+					<font>
+						<Font name="Arial" size="9.0" />
+					</font>
+				</Button>
+			</children>
+			<padding>
+				<Insets top="5.0" />
+			</padding>
+		</HBox>
+	</top>
+	<center>
+		<StackPane id="UserCenterStackPane" maxHeight="650.0" maxWidth="800.0" minHeight="200.0" minWidth="200.0" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+			<children>
+				<GridPane id="UserNotificationGridPane" fx:id="UserNotificationGridPane" maxHeight="1280.0" maxWidth="640.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label id="GeneralLabel" text="Wines available again:" />
+						<ListView id="UserNotificationListView" fx:id="UserNotificationListView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+						<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+							<children>
+								<Label id="GeneralLabel" fx:id="UserClearNotificationErrorLabel" alignment="TOP_CENTER" />
+								<Button fx:id="UserNotificationClearButton" mnemonicParsing="false" onAction="#handleUserNotificationClearButtonPressed" text="Clear Notification">
+									<font>
+										<Font name="Arial" size="12.0" />
+									</font>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+				</GridPane>
+				<GridPane id="UserSearchGridPane" fx:id="UserSearchGridPane" maxHeight="1280.0" maxWidth="640.0">
+					<children>
+						<ScrollPane id="UserSearchScrollPane" GridPane.rowIndex="1">
+							<content>
+								<VBox id="UserSearchVBox" fx:id="UserSearchVBox" />
+							</content>
+						</ScrollPane>
+						<Label id="GeneralLabel" fx:id="UserSearchWineLabel" text="Searched Wines:" />
+						<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+							<children>
+								<Label id="UserBuyErrorLabel" fx:id="UserBuyErrorLabel" contentDisplay="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" />
+								<Button fx:id="UserBuyNowButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUserBuyNowButtonPressed" prefHeight="30.0" prefWidth="100.0" text="Buy Now">
+									<font>
+										<Font name="Arial Bold" size="17.0" />
+									</font>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<effect>
+						<ColorAdjust />
+					</effect>
+					<rowConstraints>
+						<RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="836.0" minHeight="10.0" prefHeight="335.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="502.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+				</GridPane>
+            <GridPane id="UserNotificationGridPane" fx:id="UserHistoryGridPane" maxHeight="1280.0" maxWidth="640.0">
+               <children>
+                  <Label id="GeneralLabel" text="History:" />
+                  <ListView id="UserNotificationListView" fx:id="UserHistoryListView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+				<TabPane id="UserWelcomePageTabPane" fx:id="UserWelcomePageTabPane" maxHeight="1280.0" maxWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab id="GeneralTabUser" text="Welcome">
+							<content>
+								<AnchorPane id="UserWelcomeAnchorPanes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<Label id="UserWelcomeLabels" fx:id="UserWelcomeLabel" text="Welcome to ViniItaliani!" />
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab id="GeneralTabUser" text="How To">
+							<content>
+								<AnchorPane id="UserWelcomeAnchorPanes" maxHeight="1280.0" maxWidth="640.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<Label id="UserWelcomeLabels" fx:id="UserHowToLabel" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="3.0" />
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab id="GeneralTabUser" text="About Us">
+							<content>
+								<AnchorPane id="UserWelcomeAnchorPanes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<Label id="UserWelcomeLabels" fx:id="UserAboutUsLabel" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="3.0" />
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+			</children>
+		</StackPane>
+	</center>
+	<left>
+		<Region minHeight="-Infinity" prefWidth="30.0" BorderPane.alignment="CENTER" />
+	</left>
+	<right>
+		<Region minWidth="-Infinity" prefWidth="30.0" BorderPane.alignment="CENTER" />
+	</right>
+	<bottom>
+		<Region minHeight="10.0" BorderPane.alignment="CENTER" />
+	</bottom>
+</BorderPane>
