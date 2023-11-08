@@ -3,11 +3,11 @@ WINERY MANAGEMENT SYSTEM USING JAVAFX
 
 Software used:
 
--Eclipse
--JavaFX
--Maven
--Hibernate
--MySQL
+- Eclipse
+- JavaFX
+- Maven
+- Hibernate
+- MySQL
 
 -------------------------------------------------
 Uso del sistema:
