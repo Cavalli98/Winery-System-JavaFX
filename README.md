@@ -1,6 +1,8 @@
-PROGETTO SISTEMA DI GESTIONE DI AZIENDA VINICOLA
+WINERY MANAGEMENT SYSTEM USING JAVAFX
 -------------------------------------------------
-Software utilizzati:
+
+Software used:
+
 -Eclipse
 -JavaFX
 -Maven
@@ -17,8 +19,8 @@ Uso del sistema:
 o fare l'accesso tramite codice Impiegato (Employee).
 Per velocizzare l'uso, ho già inserito alcuni dati:
 
-Login    -> Username: 'agostino.poggi@unipr.it'
-         -> Password: 'unprogettopiulungononceloaveva?'
+Login    -> Username: 'prova@prova.it'
+         -> Password: 'prova'
 
 Employee -> Code: '00287755'
 
